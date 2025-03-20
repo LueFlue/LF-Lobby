@@ -110,7 +110,6 @@ AddEventHandler("playerDropped", function()
     local source = source
     local oldLobby = playerLobbies[source] or 0
 
-    -- Remove player from lobby count
     if lobbyCounts[oldLobby] then
         lobbyCounts[oldLobby] = math.max(0, lobbyCounts[oldLobby] - 1)
         UpdateLobbySpillere(oldLobby)
